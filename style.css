@@ -1,0 +1,92 @@
+/* .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .login-form label, .login-form input[type="email"], .login-form input[type="password"], .login-form input[type="submit"] {
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .login-form input[type="submit"] {
+    margin-top: 20px;
+    width: 10%;
+    padding: 10px;
+    position: absolute;
+    transition: top 0.5s ease, left 0.5s ease;
+  }
+  
+  .login-form input[type="email"].error, .login-form input[type="password"].error {
+    border: 2px solid red;
+  } */
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+  }
+  
+  .login-form label, .login-form input[type="email"], .login-form input[type="password"], .login-form input[type="submit"] {
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .login-form input[type="email"], .login-form input[type="password"], .login-form input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .login-form input[type="email"], .login-form input[type="password"] {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: 2px solid #080101;
+  }
+  
+  .login-form input[type="submit"] {
+    margin-top: 20px;
+    width: 10%;
+    padding: 10px;
+    /* //increase size of button */
+    width: 20%;
+    position: absolute;
+    transition: top 0.5s ease, left 0.5s ease;
+  }
+  
+  .login-form input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  .login-form input[type="email"].error, .login-form input[type="password"].error {
+    border: 2px solid red;
+  }
+  

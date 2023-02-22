@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <input type="submit" value="Submit" id="submitBtn">
+        </form>
+      </div>
+<script>
+
+function moveSubmitBtn() {
+  const submitBtn = document.getElementById('submitBtn');
+  const container = document.querySelector('.login-container');
+  const containerRect = container.getBoundingClientRect();
+  const buttonRect = submitBtn.getBoundingClientRect();
+  const email = document.getElementById('email');
+  const password = document.getElementById('password');
+  const correctEmail = 'mak@gmail.com';
+  const correctPassword = '1234';
+  
+  // Check if email and password are correct
+  if (email.value === correctEmail && password.value === correctPassword) {
+    // Set the position of the submit button below the password field
+    const passwordRect = password.getBoundingClientRect();
+    submitBtn.style.left = passwordRect.left + 'px';
+    submitBtn.style.top = passwordRect.top + passwordRect.height + '10px';
+    submitBtn.style.backgroundColor = 'green'; // change button color to green
+    return;
+  } else {
+    submitBtn.style.backgroundColor = 'red'; // change button color to red
+  }
+  
+  // Set the position of the submit button randomly
+  const maxLeft = containerRect.left + containerRect.width / 2 - buttonRect.width;
+  const maxRight = containerRect.left + containerRect.width - buttonRect.width;
+  const maxTop = containerRect.top + containerRect.height / 2 - buttonRect.height;
+  const maxBottom = containerRect.top + containerRect.height - buttonRect.height;
+  submitBtn.style.left = Math.floor(Math.random() * (maxRight - maxLeft + 1) + maxLeft) + 'px';
+  submitBtn.style.top = Math.floor(Math.random() * (maxBottom - maxTop + 1) + maxTop) + 'px';
+}
+
+
+document.getElementById('submitBtn').addEventListener('mouseover', function() {
+  moveSubmitBtn();
+});
+
+</script>
+</body>
+</html>
